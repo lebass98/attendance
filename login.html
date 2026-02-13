@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>출석체크 로그인</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="login-screen">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="font-toggle">
+                <div class="font-btn small active">
+                    <span class="text">가</span>
+                </div>
+                <div class="font-btn big">
+                    <span class="text">가</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scrollable Content Area -->
+        <div class="content-area">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo-wrap">
+                    <div class="logo-circle">
+                        <!-- Vector Icon Placeholder -->
+                        <i data-lucide="scan-line" color="#ffffff" size="48"></i>
+                    </div>
+                </div>
+                <h1 class="app-name">출석체크</h1>
+                <p class="app-desc">간편하게 출석을 관리하세요</p>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section">
+                <div class="input-group">
+                    <label class="input-label">이메일</label>
+                    <div class="input-field">
+                        <i data-lucide="mail" class="icon"></i>
+                        <input type="email" placeholder="이메일을 입력하세요">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">비밀번호</label>
+                    <div class="input-field">
+                        <i data-lucide="lock" class="icon"></i>
+                        <input type="password" placeholder="비밀번호를 입력하세요" id="passwordInput">
+                        <div id="togglePasswordBtn" style="cursor: pointer; display: flex; align-items: center;">
+                            <i data-lucide="eye" class="icon" id="eyeIcon"></i>
+                            <i data-lucide="eye-off" class="icon" id="eyeOffIcon" style="display: none;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="forgot-pw">비밀번호를 잊으셨나요?</a>
+            </div>
+
+            <!-- Button Section -->
+            <div class="button-section">
+                <button class="login-btn">로그인</button>
+
+                <div class="divider-row">
+                    <div class="line"></div>
+                    <span class="div-text">또는</span>
+                    <div class="line"></div>
+                </div>
+
+                <button class="social-btn facebook">
+                    <div class="logo-circle fb-logo">f</div>
+                    <span>Facebook으로 계속하기</span>
+                </button>
+
+                <button class="social-btn google">
+                    <div class="logo-circle google-logo">G</div>
+                    <span>Google로 계속하기</span>
+                </button>
+
+                <button class="social-btn apple">
+                    <div class="logo-circle apple-logo">A</div>
+                    <span>Apple로 계속하기</span>
+                </button>
+            </div>
+
+            <!-- Signup Section -->
+            <div class="signup-row">
+                <span class="signup-text">계정이 없으신가요?</span>
+                <a href="#" class="signup-link">회원가입</a>
+            </div>
+        </div>
+
+        <!-- Bottom Tab Bar -->
+        <div class="tab-bar">
+            <div class="tab-bar-inner">
+                <div class="tab-item active">
+                    <div class="icon-bg">
+                        <i data-lucide="home" size="20"></i>
+                    </div>
+                    <span class="tab-label">Home</span>
+                </div>
+                <div class="tab-item">
+                    <div class="icon-wrap">
+                        <i data-lucide="search" size="24"></i>
+                    </div>
+                    <span class="tab-label">Search</span>
+                </div>
+                <div class="tab-item">
+                    <div class="icon-wrap">
+                        <i data-lucide="heart" size="24"></i>
+                    </div>
+                    <span class="tab-label">Likes</span>
+                </div>
+                <div class="tab-item">
+                    <div class="icon-wrap">
+                        <i data-lucide="bell" size="24"></i>
+                    </div>
+                    <span class="tab-label">Notifications</span>
+                </div>
+                <div class="tab-item">
+                    <div class="icon-wrap">
+                        <i data-lucide="circle-user-round" size="24"></i>
+                    </div>
+                    <span class="tab-label">Profile</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons();
+
+        const smallFontBtn = document.querySelector('.font-btn.small');
+        const bigFontBtn = document.querySelector('.font-btn.big');
+        const body = document.body;
+
+        smallFontBtn.addEventListener('click', () => {
+            body.style.setProperty('--font-scale', '1');
+            smallFontBtn.classList.add('active');
+            bigFontBtn.classList.remove('active');
+        });
+
+        bigFontBtn.addEventListener('click', () => {
+            body.style.setProperty('--font-scale', '1.4');
+            bigFontBtn.classList.add('active');
+            smallFontBtn.classList.remove('active');
+        });
+
+        // Password Toggle Logic (Fixed)
+        const toggleBtn = document.querySelector('#togglePasswordBtn');
+        const passwordInput = document.querySelector('#passwordInput');
+
+        toggleBtn.addEventListener('click', function () {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // Toggle visibility of icons via display property
+            // We need to target the children because Lucide might have replaced <i> with <svg>
+            // but the wrapper #togglePasswordBtn remains constant.
+
+            const child1 = toggleBtn.children[0];
+            const child2 = toggleBtn.children[1];
+
+            if (type === 'text') {
+                // Show eye-off (child2), hide eye (child1)
+                child1.style.display = 'none';
+                child2.style.display = 'block';
+            } else {
+                // Show eye (child1), hide eye-off (child2)
+                child1.style.display = 'block';
+                child2.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
