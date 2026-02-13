@@ -7,13 +7,24 @@ const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [fontScale, setFontScale] = useState(1);
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
 
   const handleFontScale = (scale) => {
     setFontScale(scale);
     document.body.style.setProperty('--font-scale', scale);
   };
 
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+  };
+
   const handleLogin = () => {
+    if (!validateEmail(email)) {
+      setEmailError('이메일형태로 입력해주세요');
+      return;
+    }
     // Navigate to Main screen
     navigate('/main');
   };
@@ -57,8 +68,21 @@ const Login = () => {
             <label className="input-label">이메일</label>
             <div className="input-field">
               <Mail className="icon" />
-              <input type="email" placeholder="이메일을 입력하세요" />
+              <input 
+                type="email" 
+                placeholder="이메일을 입력하세요" 
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setEmailError('');
+                }}
+              />
             </div>
+            {emailError && (
+              <p style={{ color: 'red', fontSize: '12px', marginTop: '4px', paddingLeft: '4px' }}>
+                {emailError}
+              </p>
+            )}
           </div>
 
           <div className="input-group">

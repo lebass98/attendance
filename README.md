@@ -1,22 +1,32 @@
-# Attendance Check Login (출석체크 로그인)
+# Attendance Check App
 
-심플하고 모던한 디자인의 출석체크 서비스 로그인 페이지입니다.
+React와 Vite를 사용해 현대적으로 리뉴얼된 출석체크 서비스입니다.
+심플하고 모던한 UI를 제공하며, 데스크탑과 모바일 환경 모두에 최적화된 반응형 웹 앱입니다.
 
 ## ✨ Features (주요 기능)
 
-- **로그인 폼**: 이메일 및 비밀번호 입력
-- **비밀번호 보기/숨기기**: 눈 아이콘을 클릭하여 비밀번호 표시 여부 전환
-- **폰트 크기 조절**: 상단 '가' 버튼을 통해 전체 글자 크기 조절 (접근성 강화)
-- **소셜 로그인**: Facebook, Google, Apple 계정 연동 버튼 (UI)
-- **하단 네비게이션**: 홈, 검색, 좋아요, 알림, 프로필 탭바 구성
-- **반응형 디자인**: 다양한 디바이스에 대응하는 유연한 레이아웃
+- **로그인 (Login)**
+  - 이메일 및 비밀번호 입력 폼
+  - **이메일 유효성 검사**: 잘못된 이메일 형식 입력 시 즉시 피드백 제공
+  - **비밀번호 보기/숨기기**: 토글 아이콘으로 비밀번호 확인 가능
+  - 소셜 로그인 UI (Facebook, Google, Apple)
+  - 글자 크기 조절 ('가' 버튼)
+
+- **메인 (Main)**
+  - 사용자 맞춤형 인사말 및 날짜 표시
+  - **출석 현황 카드**: 출근/퇴근 시간 및 주간 출석 상태 시각화
+  - 퇴근하기 버튼
+  - 하단 네비게이션 바 (Home, Search, Likes, Notifications, Profile)
+  - 글자 크기 조절 기능 유지
 
 ## 🛠 Tech Stack (기술 스택)
 
-- **HTML5**: 시맨틱 마크업 구조
-- **SCSS / CSS3**: 변수 활용 및 모던 스타일링
-- **JavaScript (Vanilla)**: 동적 인터랙션 (폰트 크기, 비밀번호 토글)
-- **Lucide Icons**: 깔끔하고 통일감 있는 벡터 아이콘 사용
+- **Frontend Framework**: React 19
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **Styling**: SCSS (Sass)
+- **Icons**: Lucide React
+- **Language**: JavaScript (ES6+)
 
 ## 🚀 How to Run (실행 방법)
 
@@ -34,29 +44,31 @@
    ```bash
    npm run dev
    ```
-4. 브라우저에서 `http://localhost:5173`을 엽니다.
+4. 브라우저에서 `http://localhost:5173`을 열어 확인합니다.
 
 ### Legacy (Static HTML)
 
-기존의 정적 HTML/CSS 버전은 `_legacy` 폴더에 보관되어 있습니다. 해당 폴더 내의 `login.html` 또는 `main.html`을 직접 브라우저에서 열어 확인할 수 있습니다.
+기존의 정적 HTML/CSS 버전은 `_legacy` 폴더에 아카이빙되어 있습니다.
+- `_legacy/login.html`
+- `_legacy/main.html`
 
 ## 📂 Project Structure (폴더 구조)
 
 ```
 📦 attendance
- ┣ 📂 attendance-app    # React + Vite 프로젝트 (메인)
+ ┣ 📂 attendance-app        # React + Vite 프로젝트 (메인)
  ┃ ┣ 📂 src
  ┃ ┃ ┣ 📂 components
- ┃ ┃ ┣ 📂 pages
- ┃ ┃ ┣ 📂 scss
- ┃ ┃ ┗ 📂 assets
+ ┃ ┃ ┣ 📂 pages             # Login.jsx, Main.jsx
+ ┃ ┃ ┣ 📂 scss              # SCSS 스타일 파일
+ ┃ ┃ ┗ 📂 assets            # 이미지 및 정적 리소스
  ┃ ┗ 📜 package.json
- ┣ 📂 _legacy           # 이전 버전 (Static HTML/CSS)
+ ┣ 📂 _legacy               # 이전 버전 (Static HTML/CSS)
  ┃ ┣ 📜 login.html
  ┃ ┣ 📜 main.html
  ┃ ┗ ...
- ┣ 📜 pencil-new.pen    # Pencil 디자인 파일
- ┗ 📜 avatar.png        # 캐릭터 아바타 이미지
+ ┣ 📜 pencil-new.pen        # Pencil 디자인 파일
+ ┗ 📜 avatar.png            # 캐릭터 아바타 이미지
 ```
 
 ## 📝 License

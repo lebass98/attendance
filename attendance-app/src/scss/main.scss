@@ -45,8 +45,8 @@ body {
 // Main Screen Container
 .main-screen {
     width: 100%;
-    max-width: 402px; // Match design width
-    height: 964px; // Match design height
+    max-width: 100%;
+    min-height: 100vh;
     background-color: $bg-color;
     position: relative;
     display: flex;
@@ -80,15 +80,8 @@ body {
                     cursor: pointer;
 
                     &.active {
-                        background-color: $card-bg-yellow; // Yellow active state from JSON? 
-                        // Wait, JSON says "Small Font Btn" fill is #f5db33ff (yellow)
-                        // But in login it was white. Let's check JSON:
-                        // Node ThZBB (Small Font Btn) fill: #f5db33ff
-                        // Node O6Qao (Big Font Btn) fill: transparent? (implied)
-                        
-                        // Overriding login style based on JSON inspection for this node
-                        background-color: $primary-color; 
-                        
+                        background-color: #FFFFFF;
+
                         .text {
                             color: $primary-text;
                         }
@@ -96,26 +89,17 @@ body {
 
                     .text {
                         font-weight: 600;
-                        color: $primary-text; // Default text color based on JSON
-                    }
-
-                    &.big .text {
-                        color: $placeholder-text; // Based on JSON "bigText" fill #9C9B99
+                        color: $placeholder-text;
                     }
 
                     &.small .text {
                          font-size: calc(13px * var(--font-scale));
                     }
 
-                    &.big {
-                        .text {
-                             font-size: calc(18px * var(--font-scale));
-                        }
-                        &.active {
-                             background-color: $primary-color;
-                             .text { color: $primary-text; }
-                        }
+                    &.big .text {
+                        font-size: calc(18px * var(--font-scale));
                     }
+
                 }
             }
         }
@@ -371,7 +355,7 @@ body {
             align-items: flex-start;
             position: fixed;
             bottom: 0;
-            max-width: 402px;
+            max-width: 100%;
             background-color: #FFFFFF;
             padding: 12px 16px 32px 16px; // Padding matched from JSON [12, 16, 32, 16]
 

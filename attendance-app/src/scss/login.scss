@@ -36,18 +36,19 @@ $font-family: 'Pretendard', sans-serif;
 
 body {
     font-family: $font-family;
-    background-color: #e0e0e0; // Outer background
     display: flex;
     justify-content: center;
     min-height: 100vh;
     --font-scale: 1; // Default font scale
 }
-
+#root {
+    width:100%;
+}
 // Main Screen Container
 .login-screen {
     width: 100%;
-    max-width: 402px; // Match design width
-    height: 964px; // Match design height
+    max-width: 100%;
+    min-height: 100vh;
     background-color: $bg-color;
     position: relative;
     display: flex;
@@ -340,7 +341,7 @@ body {
             align-items: flex-start;
             position: fixed;
             bottom: 0;
-            max-width: 402px; // Constrain width if centered
+            max-width: 100%;
             background-color: #FFFFFF;
             padding: 16px;
         }
