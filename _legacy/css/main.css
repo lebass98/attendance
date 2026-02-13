@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Pretendard", sans-serif;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  --font-scale: 1;
+}
+
+.main-screen {
+  width: 100%;
+  max-width: 402px;
+  height: 964px;
+  background-color: #F5F4F1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.main-screen .status-bar {
+  width: 100%;
+  height: 54px;
+}
+.main-screen .status-bar .top-bar {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.main-screen .status-bar .top-bar .font-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EDECEA;
+  border-radius: 100px;
+  padding: 3px;
+  gap: 2px;
+  height: 36px;
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 30px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn.active {
+  background-color: #f5db33;
+  background-color: #f5db33;
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn.active .text {
+  color: #1A1918;
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn .text {
+  font-weight: 600;
+  color: #1A1918;
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn.big .text {
+  color: #9C9B99;
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn.small .text {
+  font-size: calc(13px * var(--font-scale));
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn.big .text {
+  font-size: calc(18px * var(--font-scale));
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn.big.active {
+  background-color: #f5db33;
+}
+.main-screen .status-bar .top-bar .font-toggle .font-btn.big.active .text {
+  color: #1A1918;
+}
+.main-screen .content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.main-screen .content-area .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  padding-bottom: 120px;
+}
+.main-screen .header-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.main-screen .header-section .header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.main-screen .header-section .header-left .greeting {
+  font-size: calc(22px * var(--font-scale));
+  font-weight: 600;
+  color: #1A1918;
+  letter-spacing: -0.3px;
+}
+.main-screen .header-section .header-left .date-text {
+  font-size: calc(14px * var(--font-scale));
+  color: #6D6C6A;
+  font-weight: normal;
+}
+.main-screen .header-section .notification-btn {
+  width: 44px;
+  height: 44px;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-screen .header-section .notification-btn .avatar-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-screen .header-section .notification-btn .avatar-wrap .avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-screen .attendance-card {
+  width: 100%;
+  background-color: #f5db33;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+}
+.main-screen .attendance-card .card-top {
+  display: flex;
+  justify-content: space-between;
+}
+.main-screen .attendance-card .card-top .status-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.main-screen .attendance-card .card-top .status-group .status-label {
+  font-size: calc(13px * var(--font-scale));
+  color: rgba(0, 0, 0, 0.73);
+  font-weight: 500;
+}
+.main-screen .attendance-card .card-top .status-group .status-value {
+  font-size: calc(22px * var(--font-scale));
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+.main-screen .attendance-card .card-top .badge {
+  background-color: #000000;
+  border-radius: 100px;
+  padding: 6px 12px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-screen .attendance-card .card-top .badge .badge-text {
+  color: #FFFFFF;
+  font-size: calc(12px * var(--font-scale));
+  font-weight: 600;
+}
+.main-screen .attendance-card .time-row {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+.main-screen .attendance-card .time-row .time-box {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  align-items: center;
+}
+.main-screen .attendance-card .time-row .time-box .time-label {
+  font-size: calc(12px * var(--font-scale));
+  color: rgba(0, 0, 0, 0.73);
+  font-weight: 500;
+}
+.main-screen .attendance-card .time-row .time-box .time-value {
+  font-size: calc(26px * var(--font-scale));
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.main-screen .checkout-btn {
+  width: 100%;
+  height: 56px;
+  background-color: #D89575;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.main-screen .checkout-btn .icon {
+  width: 24px;
+  height: 24px;
+}
+.main-screen .checkout-btn .btn-text {
+  color: #FFFFFF;
+  font-size: calc(18px * var(--font-scale));
+  font-weight: 600;
+}
+.main-screen .week-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.main-screen .week-section .week-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-screen .week-section .week-header .section-title {
+  font-size: calc(18px * var(--font-scale));
+  color: #1A1918;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.main-screen .week-section .week-header .week-stats {
+  font-size: calc(13px * var(--font-scale));
+  color: #3D8A5A;
+  font-weight: 500;
+}
+.main-screen .week-section .week-card {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-screen .week-section .week-card .day-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.main-screen .week-section .week-card .day-col .day-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-screen .week-section .week-card .day-col .day-circle.checked {
+  background-color: #3D8A5A;
+}
+.main-screen .week-section .week-card .day-col .day-circle.empty {
+  background-color: #EDECEA;
+}
+.main-screen .week-section .week-card .day-col .day-circle.weekend {
+  background-color: transparent;
+}
+.main-screen .week-section .week-card .day-col .day-label {
+  font-size: calc(11px * var(--font-scale));
+  color: #6D6C6A;
+  font-weight: 500;
+}
+.main-screen .tab-bar {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-screen .tab-bar .tab-bar-inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: fixed;
+  bottom: 0;
+  max-width: 402px;
+  background-color: #FFFFFF;
+  padding: 12px 16px 32px 16px;
+}
+.main-screen .tab-bar .tab-bar-inner .tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 56px;
+  cursor: pointer;
+  color: #6B7280;
+}
+.main-screen .tab-bar .tab-bar-inner .tab-item .icon-wrap {
+  height: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-screen .tab-bar .tab-bar-inner .tab-item .tab-label {
+  font-size: calc(11px * var(--font-scale));
+  font-weight: normal;
+}
+.main-screen .tab-bar .tab-bar-inner .tab-item.active {
+  color: #4F46E5;
+}
+.main-screen .tab-bar .tab-bar-inner .tab-item.active .icon-bg {
+  width: 100%;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #EEF2FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-screen .tab-bar .tab-bar-inner .tab-item.active .tab-label {
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=main.css.map */

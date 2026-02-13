@@ -1,0 +1,384 @@
+// Variables - Colors
+$bg-color: #F5F4F1;
+$primary-color: #f5db33; // Yellow-ish
+$primary-text: #1A1918;
+$secondary-text: #6D6C6A;
+$placeholder-text: #9C9B99;
+$input-bg: #FFFFFF;
+$link-color: #3D8A5A; // Green
+$divider-color: #E5E4E1;
+
+// Social Colors
+$facebook-color: #1877F2;
+$apple-color: #000000;
+
+// Fonts
+$font-family: 'Pretendard', sans-serif;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+// Global Reset
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family;
+    background-color: #e0e0e0; // Outer background
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    --font-scale: 1; // Default font scale
+}
+
+// Main Screen Container
+.login-screen {
+    width: 100%;
+    max-width: 402px; // Match design width
+    height: 964px; // Match design height
+    background-color: $bg-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; // Clip content
+
+    // Top Bar
+    .top-bar {
+        width: 100%;
+        padding: 20px 16px;
+        display: flex;
+        justify-content: flex-end;
+
+        .font-toggle {
+            @include flex-center;
+            background-color: #EDECEA;
+            border-radius: 100px;
+            padding: 3px;
+            gap: 2px;
+            height: 36px;
+
+            .font-btn {
+                @include flex-center;
+                width: 44px;
+                height: 30px;
+                border-radius: 100px;
+                cursor: pointer;
+
+                &.active {
+                    background-color: #FFFFFF;
+
+                    .text {
+                        color: $primary-text;
+                    }
+                }
+
+                .text {
+                    font-weight: 600;
+                    color: $placeholder-text;
+                }
+
+                &.small .text {
+                    font-size: calc(13px * var(--font-scale));
+                }
+
+                &.big .text {
+                    font-size: calc(18px * var(--font-scale));
+                }
+            }
+        }
+    }
+
+    // Content Area
+    .content-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto; // Allow scroll if content overflows
+    }
+
+    // Logo Section
+    .logo-section {
+        @include flex-col;
+        align-items: center;
+        padding: 0 32px 24px 32px;
+        gap: 16px;
+
+        .logo-wrap {
+            width: 100%;
+            @include flex-center;
+        }
+
+        .logo-circle {
+            @include flex-center;
+            width: 80px;
+            height: 80px;
+            border-radius: 100px;
+            background-color: $primary-color;
+        }
+
+        .app-name {
+            font-size: calc(32px * var(--font-scale));
+            font-weight: bold;
+            color: $primary-text;
+            letter-spacing: -1px;
+            text-align: center;
+        }
+
+        .app-desc {
+            font-size: calc(15px * var(--font-scale));
+            font-weight: 400;
+            color: $secondary-text;
+            text-align: center;
+        }
+    }
+
+    // Form Section
+    .form-section {
+        @include flex-col;
+        padding: 0 32px 8px 32px;
+        gap: 14px;
+
+        .input-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            /* rough estimate */
+
+            .input-label {
+                font-size: calc(13px * var(--font-scale));
+                font-weight: 600;
+                color: $primary-text;
+            }
+
+            .input-field {
+                @include flex-center;
+                justify-content: flex-start;
+                height: 52px;
+                padding: 0 16px;
+                background-color: $input-bg;
+                border-radius: 6px;
+                gap: 12px;
+
+                .icon {
+                    color: $placeholder-text;
+                    width: 20px;
+                    height: 20px;
+                }
+
+                input {
+                    flex: 1;
+                    border: none;
+                    outline: none;
+                    font-size: calc(15px * var(--font-scale));
+                    color: $primary-text;
+                    font-family: $font-family;
+
+                    &::placeholder {
+                        color: $placeholder-text;
+                    }
+                }
+            }
+        }
+
+        .forgot-pw {
+            text-align: right;
+            font-size: calc(13px * var(--font-scale));
+            font-weight: 500;
+            color: $link-color;
+            text-decoration: none;
+        }
+    }
+
+    // Button Section
+    .button-section {
+        @include flex-col;
+        padding: 0 32px;
+        gap: 12px;
+
+        button {
+            width: 100%;
+            height: 52px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-family: $font-family;
+            font-size: calc(15px * var(--font-scale));
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .login-btn {
+            height: 56px;
+            background-color: $primary-color;
+            color: #000000;
+            font-size: calc(18px * var(--font-scale));
+            font-weight: 600;
+        }
+
+        .divider-row {
+            @include flex-center;
+            gap: 16px;
+            padding: 12px 0;
+
+            .line {
+                flex: 1;
+                height: 1px;
+                background-color: $divider-color;
+            }
+
+            .div-text {
+                font-size: calc(13px * var(--font-scale));
+                color: $placeholder-text;
+            }
+        }
+
+        .social-btn {
+            padding: 0 20px;
+            color: #FFFFFF;
+            justify-content: flex-start;
+
+            &.facebook {
+                background-color: $facebook-color;
+            }
+
+            &.google {
+                background-color: #FFFFFF;
+                color: $primary-text;
+                border: 1px solid #E5E4E1;
+                /* Optional border for white button */
+            }
+
+            &.apple {
+                background-color: $apple-color;
+            }
+
+            .logo-circle {
+                width: 24px;
+                height: 24px;
+                border-radius: 100px;
+                background-color: #FFFFFF;
+                /* Default bg for logos inside buttons */
+                color: #000;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: calc(14px * var(--font-scale));
+
+                &.fb-logo {
+                    color: $facebook-color;
+                    font-size: calc(16px * var(--font-scale));
+                }
+
+                &.google-logo {
+                    /* Custom google logo styling if needed */
+                }
+
+                &.apple-logo {
+                    color: #000;
+                }
+            }
+
+            // Special case for Google button logo
+            &.google .logo-circle {
+                color: #4285F4;
+                border: 1px solid #eee;
+            }
+        }
+    }
+
+    // Signup Section
+    .signup-row {
+        @include flex-center;
+        padding: 16px 0;
+        gap: 4px;
+
+        .signup-text {
+            font-size: calc(14px * var(--font-scale));
+            color: $secondary-text;
+        }
+
+        .signup-link {
+            font-size: calc(14px * var(--font-scale));
+            font-weight: 600;
+            color: $link-color;
+            text-decoration: none;
+        }
+    }
+
+    // Tab Bar
+    .tab-bar {
+        width: 100%;
+        position: relative; // Or fixed, but relative to .login-screen which is relative/absolute positioned wrapper
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .tab-bar-inner {
+            display: flex;
+            width:100%;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: fixed;
+            bottom: 0;
+            max-width: 402px; // Constrain width if centered
+            background-color: #FFFFFF;
+            padding: 16px;
+        }
+
+        .tab-item {
+            @include flex-col;
+            align-items: center;
+            gap: 4px;
+            width: 56px;
+            cursor: pointer;
+            color: #6B7280; // Gray-500
+
+            .icon-wrap {
+                height: 32px;
+                width: 100%;
+                @include flex-center;
+            }
+
+            .tab-label {
+                font-size: calc(11px * var(--font-scale));
+                font-weight: normal;
+            }
+
+            &.active {
+                color: #4F46E5; // Indigo-600
+
+                .icon-bg {
+                    width: 100%;
+                    height: 32px;
+                    border-radius: 16px;
+                    background-color: #EEF2FF;
+                    @include flex-center;
+                }
+
+                .tab-label {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

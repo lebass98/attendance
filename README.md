@@ -20,21 +20,43 @@
 
 ## 🚀 How to Run (실행 방법)
 
-1. 저장소를 클론합니다.
+### React Application (Current)
+
+1. `attendance-app` 폴더로 이동합니다.
    ```bash
-   git clone https://github.com/lebass98/attendance.git
+   cd attendance-app
    ```
-2. `login.html` 파일을 브라우저에서 실행합니다.
-   - VS Code의 Live Server 확장을 사용하면 더욱 편리하게 확인할 수 있습니다.
+2. 의존성을 설치합니다.
+   ```bash
+   npm install
+   ```
+3. 개발 서버를 실행합니다.
+   ```bash
+   npm run dev
+   ```
+4. 브라우저에서 `http://localhost:5173`을 엽니다.
+
+### Legacy (Static HTML)
+
+기존의 정적 HTML/CSS 버전은 `_legacy` 폴더에 보관되어 있습니다. 해당 폴더 내의 `login.html` 또는 `main.html`을 직접 브라우저에서 열어 확인할 수 있습니다.
 
 ## 📂 Project Structure (폴더 구조)
 
 ```
 📦 attendance
- ┣ 📜 login.html      # 메인 진입 페이지
- ┣ 📜 login.scss      # 스타일 소스 파일 (SASS)
- ┣ 📜 login.css       # 컴파일된 CSS 파일
- ┗ 📜 package.json    # 프로젝트 메타데이터
+ ┣ 📂 attendance-app    # React + Vite 프로젝트 (메인)
+ ┃ ┣ 📂 src
+ ┃ ┃ ┣ 📂 components
+ ┃ ┃ ┣ 📂 pages
+ ┃ ┃ ┣ 📂 scss
+ ┃ ┃ ┗ 📂 assets
+ ┃ ┗ 📜 package.json
+ ┣ 📂 _legacy           # 이전 버전 (Static HTML/CSS)
+ ┃ ┣ 📜 login.html
+ ┃ ┣ 📜 main.html
+ ┃ ┗ ...
+ ┣ 📜 pencil-new.pen    # Pencil 디자인 파일
+ ┗ 📜 avatar.png        # 캐릭터 아바타 이미지
 ```
 
 ## 📝 License
