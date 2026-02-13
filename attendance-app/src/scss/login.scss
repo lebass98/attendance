@@ -1,21 +1,21 @@
-// Variables - Colors
+// 변수 - 색상
 $bg-color: #F5F4F1;
-$primary-color: #f5db33; // Yellow-ish
+$primary-color: #f5db33; // 노란색 계열
 $primary-text: #1A1918;
 $secondary-text: #6D6C6A;
 $placeholder-text: #9C9B99;
 $input-bg: #FFFFFF;
-$link-color: #3D8A5A; // Green
+$link-color: #3D8A5A; // 녹색
 $divider-color: #E5E4E1;
 
-// Social Colors
+// 소셜 색상
 $facebook-color: #1877F2;
 $apple-color: #000000;
 
-// Fonts
+// 폰트
 $font-family: 'Pretendard', sans-serif;
 
-// Mixins
+// 믹스인
 @mixin flex-center {
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@ $font-family: 'Pretendard', sans-serif;
     flex-direction: column;
 }
 
-// Global Reset
+// 전역 초기화
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,12 +39,12 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    --font-scale: 1; // Default font scale
+    --font-scale: 1; // 기본 폰트 비율
 }
 #root {
     width:100%;
 }
-// Main Screen Container
+// 메인 화면 컨테이너
 .login-screen {
     width: 100%;
     max-width: 100%;
@@ -53,9 +53,9 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    overflow: hidden; // Clip content
+    overflow: hidden; // 콘텐츠 자르기
 
-    // Top Bar
+    // 상단 바
     .top-bar {
         width: 100%;
         padding: 20px 16px;
@@ -101,15 +101,15 @@ body {
         }
     }
 
-    // Content Area
+    // 콘텐츠 영역
     .content-area {
         flex: 1;
         display: flex;
         flex-direction: column;
-        overflow-y: auto; // Allow scroll if content overflows
+        overflow-y: auto; // 콘텐츠 넘침 시 스크롤 허용
     }
 
-    // Logo Section
+    // 로고 섹션
     .logo-section {
         @include flex-col;
         align-items: center;
@@ -145,7 +145,7 @@ body {
         }
     }
 
-    // Form Section
+    // 폼 섹션
     .form-section {
         @include flex-col;
         padding: 0 32px 8px 32px;
@@ -156,7 +156,7 @@ body {
             display: flex;
             flex-direction: column;
             gap: 8px;
-            /* rough estimate */
+            /* 대략적인 추정치 */
 
             .input-label {
                 font-size: calc(13px * var(--font-scale));
@@ -186,9 +186,25 @@ body {
                     font-size: calc(15px * var(--font-scale));
                     color: $primary-text;
                     font-family: $font-family;
+                    background: transparent;
 
                     &::placeholder {
                         color: $placeholder-text;
+                    }
+                }
+
+                .clear-btn {
+                    @include flex-center;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #1A1918; // Dark/Black background
+                    cursor: pointer;
+                    margin-left: 4px; // Spacing from previous element
+                    flex-shrink: 0;
+
+                    &:hover {
+                        background-color: #333; // Slight hover effect
                     }
                 }
             }
@@ -203,7 +219,7 @@ body {
         }
     }
 
-    // Button Section
+    // 버튼 섹션
     .button-section {
         @include flex-col;
         padding: 0 32px;
@@ -262,7 +278,7 @@ body {
                 background-color: #FFFFFF;
                 color: $primary-text;
                 border: 1px solid #E5E4E1;
-                /* Optional border for white button */
+                /* 흰색 버튼을 위한 테두리 (선택 사항) */
             }
 
             &.apple {
@@ -274,7 +290,7 @@ body {
                 height: 24px;
                 border-radius: 100px;
                 background-color: #FFFFFF;
-                /* Default bg for logos inside buttons */
+                /* 버튼 내부 로고의 기본 배경 */
                 color: #000;
                 font-weight: bold;
                 display: flex;
@@ -288,7 +304,7 @@ body {
                 }
 
                 &.google-logo {
-                    /* Custom google logo styling if needed */
+                    /* 필요 시 구글 로고 커스텀 스타일링 */
                 }
 
                 &.apple-logo {
@@ -296,7 +312,7 @@ body {
                 }
             }
 
-            // Special case for Google button logo
+            // 구글 버튼 로고를 위한 특수 케이스
             &.google .logo-circle {
                 color: #4285F4;
                 border: 1px solid #eee;
@@ -304,7 +320,7 @@ body {
         }
     }
 
-    // Signup Section
+    // 회원가입 섹션
     .signup-row {
         @include flex-center;
         padding: 16px 0;
@@ -323,10 +339,10 @@ body {
         }
     }
 
-    // Tab Bar
+    // 탭 바
     .tab-bar {
         width: 100%;
-        position: relative; // Or fixed, but relative to .login-screen which is relative/absolute positioned wrapper
+        position: relative; // 고정 또는 .login-screen 기준 상대 위치 (상대/절대 위치 래퍼)
         bottom: 0;
         left: 0;
         z-index: 10;

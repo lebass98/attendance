@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Mail, Lock, Eye, EyeOff, Home, Search, Heart, Bell, CircleUserRound, ScanLine } from 'lucide-react';
+import { Mail, Lock, Eye, EyeOff, Home, Search, Heart, Bell, CircleUserRound, ScanLine, X } from 'lucide-react';
 import '../scss/login.scss';
+import BottomNav from '../components/BottomNav';
 
 const Login = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [fontScale, setFontScale] = useState(1);
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
 
   const handleFontScale = (scale) => {
@@ -31,7 +33,7 @@ const Login = () => {
 
   return (
     <div className="login-screen">
-      {/* Top Bar */}
+      {/* 상단 바 */}
       <div className="top-bar">
         <div className="font-toggle">
           <div 
@@ -49,9 +51,9 @@ const Login = () => {
         </div>
       </div>
 
-      {/* Scrollable Content Area */}
+      {/* 스크롤 가능한 콘텐츠 영역 */}
       <div className="content-area">
-        {/* Logo Section */}
+        {/* 로고 섹션 */}
         <div className="logo-section">
           <div className="logo-wrap">
             <div className="logo-circle">
@@ -62,7 +64,7 @@ const Login = () => {
           <p className="app-desc">간편하게 출석을 관리하세요</p>
         </div>
 
-        {/* Form Section */}
+        {/* 폼 섹션 */}
         <div className="form-section">
           <div className="input-group">
             <label className="input-label">이메일</label>
@@ -77,6 +79,11 @@ const Login = () => {
                   setEmailError('');
                 }}
               />
+              {email && (
+                <div className="clear-btn" onClick={() => setEmail('')}>
+                  <X size={12} color="#ffffff" strokeWidth={3} />
+                </div>
+              )}
             </div>
             {emailError && (
               <p style={{ color: 'red', fontSize: '12px', marginTop: '4px', paddingLeft: '4px' }}>
@@ -92,6 +99,8 @@ const Login = () => {
               <input 
                 type={showPassword ? "text" : "password"} 
                 placeholder="비밀번호를 입력하세요" 
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 id="passwordInput" 
               />
               <div 
@@ -101,13 +110,18 @@ const Login = () => {
               >
                 {showPassword ? <EyeOff className="icon" /> : <Eye className="icon" />}
               </div>
+              {password && (
+                <div className="clear-btn" onClick={() => setPassword('')}>
+                  <X size={12} color="#ffffff" strokeWidth={3} />
+                </div>
+              )}
             </div>
           </div>
 
           <a href="#" className="forgot-pw">비밀번호를 잊으셨나요?</a>
         </div>
 
-        {/* Button Section */}
+        {/* 버튼 섹션 */}
         <div className="button-section">
           <button className="login-btn" onClick={handleLogin}>로그인</button>
 
@@ -133,48 +147,15 @@ const Login = () => {
           </button>
         </div>
 
-        {/* Signup Section */}
+        {/* 회원가입 섹션 */}
         <div className="signup-row">
           <span className="signup-text">계정이 없으신가요?</span>
           <a href="#" className="signup-link">회원가입</a>
         </div>
       </div>
 
-      {/* Bottom Tab Bar */}
-      <div className="tab-bar">
-        <div className="tab-bar-inner">
-          <div className="tab-item active">
-            <div className="icon-bg">
-              <Home size={20} />
-            </div>
-            <span className="tab-label">Home</span>
-          </div>
-          <div className="tab-item">
-            <div className="icon-wrap">
-              <Search size={24} />
-            </div>
-            <span className="tab-label">Search</span>
-          </div>
-          <div className="tab-item">
-            <div className="icon-wrap">
-              <Heart size={24} />
-            </div>
-            <span className="tab-label">Likes</span>
-          </div>
-          <div className="tab-item">
-            <div className="icon-wrap">
-              <Bell size={24} />
-            </div>
-            <span className="tab-label">Notifications</span>
-          </div>
-          <div className="tab-item">
-            <div className="icon-wrap">
-              <CircleUserRound size={24} />
-            </div>
-            <span className="tab-label">Profile</span>
-          </div>
-        </div>
-      </div>
+      {/* 하단 탭 바 */}
+      <BottomNav activeTab="home" />
     </div>
   );
 };
