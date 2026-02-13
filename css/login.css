@@ -147,9 +147,6 @@ body {
   color: #1A1918;
   font-family: "Pretendard", sans-serif;
 }
-.login-screen .form-section .input-group .input-field input::-moz-placeholder {
-  color: #9C9B99;
-}
 .login-screen .form-section .input-group .input-field input::placeholder {
   color: #9C9B99;
 }
@@ -319,4 +316,6 @@ body {
 }
 .login-screen .tab-bar .tab-item.active .tab-label {
   font-weight: 600;
-}/*# sourceMappingURL=login.css.map */
+}
+
+/*# sourceMappingURL=login.css.map */
