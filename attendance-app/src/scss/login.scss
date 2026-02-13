@@ -54,6 +54,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden; // 콘텐츠 자르기
+    padding-bottom:100px;
 
     // 상단 바
     .top-bar {
@@ -107,13 +108,14 @@ body {
         display: flex;
         flex-direction: column;
         overflow-y: auto; // 콘텐츠 넘침 시 스크롤 허용
+        padding: 0 24px;
     }
 
     // 로고 섹션
     .logo-section {
         @include flex-col;
         align-items: center;
-        padding: 0 32px 24px 32px;
+        padding: 0 0 24px 0;
         gap: 16px;
 
         .logo-wrap {
@@ -145,10 +147,76 @@ body {
         }
     }
 
+    // OTP 섹션 (인증번호)
+    .otp-section {
+        @include flex-col;
+        align-items: center;
+        width: 100%;
+        padding: 0 24px 24px 24px; // 좌우 24px, 하단 여백
+        gap: 16px;
+
+        .otp-title {
+            font-size: calc(16px * var(--font-scale));
+            font-weight: 500;
+            color: $secondary-text;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .otp-inputs {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            width: 100%;
+
+            .otp-input {
+                width: 50px;
+                height: 50px;
+                border: 1px solid #E5E5E5;
+                border-radius: 12px;
+                text-align: center;
+                font-size: calc(24px * var(--font-scale));
+                font-weight: bold;
+                color: $primary-text;
+                background-color: #FFFFFF;
+                outline: none;
+                transition: border-color 0.2s;
+
+                &:focus {
+                    border-color: $link-color; // Focus color (using green for now)
+                    border-width: 1px;
+                }
+
+                &.filled {
+                    border-color: $primary-text; // Filled state border
+                }
+            }
+        }
+
+        .otp-timer {
+            font-size: calc(20px * var(--font-scale));
+            font-weight: bold;
+            color: $secondary-text; 
+            letter-spacing: 1px;
+        }
+
+        .otp-error {
+            font-size: calc(13px * var(--font-scale));
+            color: #EF4444; // Red color
+            margin-top: 4px;
+        }
+    }
+
+    // 로그인 폼 컨테이너 (폼 + 버튼 + 회원가입)
+    .login-form-container {
+        @include flex-col;
+        gap: 0; // 내부 섹션들이 이미 패딩/마진을 가지고 있을 수 있음, 필요시 조정
+    }
+
     // 폼 섹션
     .form-section {
         @include flex-col;
-        padding: 0 32px 8px 32px;
+        padding: 0 0 8px 0;
         gap: 14px;
 
         .input-group {
@@ -222,7 +290,7 @@ body {
     // 버튼 섹션
     .button-section {
         @include flex-col;
-        padding: 0 32px;
+        padding: 0;
         gap: 12px;
 
         button {

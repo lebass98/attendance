@@ -52,6 +52,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden; // 콘텐츠 자르기
+    padding-bottom:100px;
 
     // 상태 바 & 상단 바
     .status-bar {
