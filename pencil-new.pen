@@ -1,5 +1,5 @@
 {
-  "version": "2.7",
+  "version": "2.8",
   "children": [
     {
       "type": "frame",
@@ -3003,6 +3003,175 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ZNUrf",
+      "x": -409,
+      "y": -157,
+      "name": "1",
+      "width": 328,
+      "height": 216,
+      "fill": "#ffffffff",
+      "cornerRadius": 16,
+      "stroke": {
+        "align": "inside",
+        "thickness": 2,
+        "fill": "#de3412ff"
+      },
+      "layout": "vertical",
+      "gap": 24,
+      "padding": [
+        40,
+        0,
+        0,
+        0
+      ],
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "OXzYV",
+          "name": "Frame 34729",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "gap": 24,
+          "justifyContent": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "aAtRp",
+              "name": "인증번호 4자리를 입력해주세요.",
+              "fill": "#767676ff",
+              "content": "인증번호 4자리를 입력해주세요.",
+              "lineHeight": 1.5,
+              "textAlignVertical": "middle",
+              "fontFamily": "Pretendard GOV",
+              "fontSize": 18,
+              "fontWeight": "normal",
+              "letterSpacing": -0.45
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "JOlTk",
+          "name": "number",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "tNpcL",
+              "name": "Frame 2078247817",
+              "width": 56,
+              "height": 56,
+              "fill": "#ffffffff",
+              "cornerRadius": 8,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#111111ff"
+              },
+              "gap": 10,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "bH3Fg",
+                  "name": "Rectangle 4624",
+                  "fill": "#f5db33ff",
+                  "width": 2,
+                  "height": 40,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 8,
+              "id": "4etrP",
+              "name": "Rectangle 4623",
+              "fill": "#ffffffff",
+              "width": 56,
+              "height": 56,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#ddddddff"
+              }
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 8,
+              "id": "5iQLg",
+              "name": "Rectangle 4624",
+              "fill": "#ffffffff",
+              "width": 56,
+              "height": 56,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#ddddddff"
+              }
+            },
+            {
+              "type": "rectangle",
+              "cornerRadius": 8,
+              "id": "8Z2N0",
+              "name": "Rectangle 4623",
+              "fill": "#ffffffff",
+              "width": 56,
+              "height": 56,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#ddddddff"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "8sge8",
+          "name": "03 : 02",
+          "fill": "#767676ff",
+          "content": "03 : 02",
+          "lineHeight": 1.399999976158142,
+          "textAlign": "center",
+          "textAlignVertical": "middle",
+          "fontFamily": "Pretendard GOV",
+          "fontSize": 22,
+          "fontWeight": "700",
+          "letterSpacing": -0.55
+        },
+        {
+          "type": "text",
+          "id": "jP7Ad",
+          "name": "* 인증번호를 확인해 주세요.",
+          "fill": "#de3412ff",
+          "textGrowth": "fixed-width",
+          "width": 159,
+          "content": "* 인증번호를 확인해 주세요.",
+          "lineHeight": 1.600000023841858,
+          "textAlign": "center",
+          "textAlignVertical": "middle",
+          "fontFamily": "Pretendard GOV",
+          "fontSize": 14,
+          "fontWeight": "normal",
+          "letterSpacing": -0.25
         }
       ]
     }
