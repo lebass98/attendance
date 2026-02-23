@@ -4,7 +4,7 @@
     {
       "type": "frame",
       "id": "KKMXU",
-      "x": 0,
+      "x": 1,
       "y": 0,
       "name": "Login Screen",
       "clip": true,
@@ -243,7 +243,7 @@
               "width": "fill_container",
               "content": "출석체크",
               "textAlign": "center",
-              "fontFamily": "Outfit",
+              "fontFamily": "Pretendard GOV",
               "fontSize": 32,
               "fontWeight": "bold",
               "letterSpacing": -1
@@ -257,7 +257,7 @@
               "width": "fill_container",
               "content": "간편하게 출석을 관리하세요",
               "textAlign": "center",
-              "fontFamily": "Outfit",
+              "fontFamily": "Pretendard GOV",
               "fontSize": 15,
               "fontWeight": "normal"
             }
@@ -425,7 +425,7 @@
                   "name": "loginBtnText",
                   "fill": "#000000ff",
                   "content": "로그인",
-                  "fontFamily": "Outfit",
+                  "fontFamily": "Pretendard GOV",
                   "fontSize": 18,
                   "fontWeight": "600"
                 }
@@ -516,7 +516,7 @@
                   "name": "fbText",
                   "fill": "#FFFFFF",
                   "content": "Facebook으로 계속하기",
-                  "fontFamily": "Outfit",
+                  "fontFamily": "Pretendard GOV",
                   "fontSize": 15,
                   "fontWeight": "500"
                 }
@@ -571,7 +571,7 @@
                   "name": "googleText",
                   "fill": "#1A1918",
                   "content": "Google로 계속하기",
-                  "fontFamily": "Outfit",
+                  "fontFamily": "Pretendard GOV",
                   "fontSize": 15,
                   "fontWeight": "500"
                 }
@@ -915,7 +915,7 @@
     {
       "type": "frame",
       "id": "31gqB",
-      "x": 502,
+      "x": 503,
       "y": 0,
       "name": "Main Screen",
       "clip": true,
@@ -1117,7 +1117,7 @@
                           "name": "statusValue",
                           "fill": "#000000ff",
                           "content": "출석 완료 ✓",
-                          "fontFamily": "Outfit",
+                          "fontFamily": "Pretendard GOV",
                           "fontSize": 22,
                           "fontWeight": "700",
                           "letterSpacing": -0.3
@@ -1596,7 +1596,7 @@
                       "name": "recentTitle",
                       "fill": "#1A1918",
                       "content": "최근 출석 기록",
-                      "fontFamily": "Outfit",
+                      "fontFamily": "Pretendard GOV",
                       "fontSize": 18,
                       "fontWeight": "600",
                       "letterSpacing": -0.2
@@ -2098,7 +2098,7 @@
     {
       "type": "frame",
       "id": "UpllT",
-      "x": 1004,
+      "x": 1006,
       "y": 0,
       "name": "Login Screen - Dark",
       "clip": true,
@@ -3008,172 +3008,829 @@
     },
     {
       "type": "frame",
-      "id": "ZNUrf",
-      "x": -409,
-      "y": -157,
-      "name": "1",
-      "width": 328,
-      "height": 216,
-      "fill": "#ffffffff",
-      "cornerRadius": 16,
+      "id": "kaih6",
+      "x": 1462,
+      "y": 0,
+      "name": "출석체크완료",
+      "clip": true,
+      "width": 360,
+      "height": 740,
+      "fill": "#f8f8f8ff",
       "stroke": {
         "align": "inside",
-        "thickness": 2,
-        "fill": "#de3412ff"
+        "thickness": 1
       },
-      "layout": "vertical",
-      "gap": 24,
-      "padding": [
-        40,
-        0,
-        0,
-        0
-      ],
-      "alignItems": "center",
+      "layout": "none",
       "children": [
         {
           "type": "frame",
-          "id": "OXzYV",
-          "name": "Frame 34729",
+          "id": "g9idZ",
+          "x": 30,
+          "y": 92,
+          "name": "타이틀",
+          "width": 300,
           "stroke": {
             "align": "inside",
             "thickness": 1
           },
-          "gap": 24,
-          "justifyContent": "center",
-          "children": [
-            {
-              "type": "text",
-              "id": "aAtRp",
-              "name": "인증번호 4자리를 입력해주세요.",
-              "fill": "#767676ff",
-              "content": "인증번호 4자리를 입력해주세요.",
-              "lineHeight": 1.5,
-              "textAlignVertical": "middle",
-              "fontFamily": "Pretendard GOV",
-              "fontSize": 18,
-              "fontWeight": "normal",
-              "letterSpacing": -0.45
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "JOlTk",
-          "name": "number",
-          "stroke": {
-            "align": "inside",
-            "thickness": 1
-          },
+          "layout": "vertical",
           "gap": 16,
           "alignItems": "center",
           "children": [
             {
-              "type": "frame",
-              "id": "tNpcL",
-              "name": "Frame 2078247817",
-              "width": 56,
-              "height": 56,
-              "fill": "#ffffffff",
-              "cornerRadius": 8,
-              "stroke": {
-                "align": "inside",
-                "thickness": 1,
-                "fill": "#111111ff"
-              },
-              "gap": 10,
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "type": "rectangle",
-                  "id": "bH3Fg",
-                  "name": "Rectangle 4624",
-                  "fill": "#f5db33ff",
-                  "width": 2,
-                  "height": 40,
-                  "stroke": {
-                    "align": "inside",
-                    "thickness": 1
-                  }
-                }
-              ]
-            },
-            {
-              "type": "rectangle",
-              "cornerRadius": 8,
-              "id": "4etrP",
-              "name": "Rectangle 4623",
-              "fill": "#ffffffff",
-              "width": 56,
-              "height": 56,
-              "stroke": {
-                "align": "inside",
-                "thickness": 1,
-                "fill": "#ddddddff"
-              }
-            },
-            {
-              "type": "rectangle",
-              "cornerRadius": 8,
-              "id": "5iQLg",
-              "name": "Rectangle 4624",
-              "fill": "#ffffffff",
-              "width": 56,
-              "height": 56,
-              "stroke": {
-                "align": "inside",
-                "thickness": 1,
-                "fill": "#ddddddff"
-              }
-            },
-            {
-              "type": "rectangle",
-              "cornerRadius": 8,
-              "id": "8Z2N0",
-              "name": "Rectangle 4623",
-              "fill": "#ffffffff",
-              "width": 56,
-              "height": 56,
-              "stroke": {
-                "align": "inside",
-                "thickness": 1,
-                "fill": "#ddddddff"
-              }
+              "type": "text",
+              "id": "xaFjt",
+              "name": "2026 상반기 정기교육",
+              "fill": "#111111ff",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "2026 \n상반기 정기교육",
+              "lineHeight": 1.399999976158142,
+              "textAlign": "center",
+              "textAlignVertical": "middle",
+              "fontFamily": "Pretendard GOV",
+              "fontSize": 36,
+              "fontWeight": "700",
+              "letterSpacing": -0.9
             }
           ]
         },
         {
-          "type": "text",
-          "id": "8sge8",
-          "name": "03 : 02",
-          "fill": "#767676ff",
-          "content": "03 : 02",
-          "lineHeight": 1.399999976158142,
-          "textAlign": "center",
-          "textAlignVertical": "middle",
-          "fontFamily": "Pretendard GOV",
-          "fontSize": 22,
-          "fontWeight": "700",
-          "letterSpacing": -0.55
+          "type": "frame",
+          "id": "LIbDz",
+          "x": 16,
+          "y": 236,
+          "name": "Frame 2078247847",
+          "width": 328,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "layout": "vertical",
+          "gap": 24,
+          "children": [
+            {
+              "type": "frame",
+              "id": "5QC2X",
+              "name": "Frame 2078247837",
+              "width": "fill_container",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              },
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "OS1ph",
+                  "name": "btn",
+                  "width": "fill_container",
+                  "height": 216,
+                  "fill": "#ffffffff",
+                  "cornerRadius": 16,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 2
+                  },
+                  "layout": "vertical",
+                  "gap": 4,
+                  "padding": [
+                    32,
+                    24
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "sbdFY",
+                      "name": "icon",
+                      "width": 68,
+                      "height": 68,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "path",
+                          "id": "dVt6s",
+                          "x": 45,
+                          "y": 40,
+                          "name": "Union",
+                          "rotation": 90.00000250447808,
+                          "geometry": "M9.11275 8.79849c-1.44864 1.60326-3.78494 1.60162-5.23246-0.00256-1.4142-1.56725-2.54116-3.08875-3.38127-4.34343-1.18914-1.77607-0.12305-4.08417 1.82625-4.25473 1.23987-0.10845 2.70638-0.19777 4.17595-0.19777 1.46641 0 2.92975 0.08717 4.16794 0.19317 1.95106 0.16708 3.02256 2.4759 1.83212 4.25462-0.8415 1.25734-1.9708 2.78161-3.38853 4.3507z",
+                          "fill": "#000000ff",
+                          "width": 13,
+                          "height": 10.000000953674316,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "rKWAo",
+                      "name": "text",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "layout": "vertical",
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JzTjs",
+                          "name": "교육 진행 중",
+                          "fill": "#111111ff",
+                          "content": "교육 진행 중",
+                          "lineHeight": 1.399999976158142,
+                          "textAlignVertical": "middle",
+                          "fontFamily": "Pretendard GOV",
+                          "fontSize": 22,
+                          "fontWeight": "700",
+                          "letterSpacing": -0.55
+                        },
+                        {
+                          "type": "text",
+                          "id": "RQu1C",
+                          "name": "15:12 출석",
+                          "fill": "#333333ff",
+                          "content": "15:12 출석",
+                          "lineHeight": 1.5,
+                          "textAlign": "center",
+                          "textAlignVertical": "middle",
+                          "fontFamily": "Pretendard GOV",
+                          "fontSize": 18,
+                          "fontWeight": "normal",
+                          "letterSpacing": -0.45
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "2BfGF",
+                  "name": "notice",
+                  "width": "fill_container",
+                  "fill": "#ffffffff",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "gap": 10,
+                  "padding": [
+                    16,
+                    10
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Gqr21",
+                      "name": "홍길동 님, 2026년 상반기 정기교육 이수 중입니다.",
+                      "fill": "#333333ff",
+                      "content": "홍길동 님,\n2026년 상반기 정기교육 이수 중입니다. ",
+                      "lineHeight": 1.5,
+                      "textAlign": "center",
+                      "textAlignVertical": "middle",
+                      "fontFamily": "Pretendard GOV",
+                      "fontSize": 18,
+                      "fontWeight": "normal",
+                      "letterSpacing": -0.45
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "OLNwt",
+              "name": "btn",
+              "width": "fill_container",
+              "fill": "#de3412ff",
+              "cornerRadius": 8,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              },
+              "gap": 10,
+              "padding": [
+                12,
+                24
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "FDq4X",
+                  "name": "Text",
+                  "fill": "#ffffffff",
+                  "content": "중도 퇴실",
+                  "lineHeight": 1.5,
+                  "textAlign": "center",
+                  "textAlignVertical": "middle",
+                  "fontFamily": "Pretendard GOV",
+                  "fontSize": 20,
+                  "fontWeight": "600",
+                  "letterSpacing": -0.5
+                }
+              ]
+            }
+          ]
         },
         {
-          "type": "text",
-          "id": "jP7Ad",
-          "name": "* 인증번호를 확인해 주세요.",
-          "fill": "#de3412ff",
-          "textGrowth": "fixed-width",
-          "width": 159,
-          "content": "* 인증번호를 확인해 주세요.",
-          "lineHeight": 1.600000023841858,
-          "textAlign": "center",
-          "textAlignVertical": "middle",
-          "fontFamily": "Pretendard GOV",
-          "fontSize": 14,
-          "fontWeight": "normal",
-          "letterSpacing": -0.25
+          "type": "frame",
+          "id": "RFjjj",
+          "x": 0,
+          "y": 0,
+          "name": "header",
+          "width": 360,
+          "height": 52,
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "#e8e8e8ff"
+          },
+          "gap": 168,
+          "padding": [
+            12,
+            16
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "nZCub",
+              "name": "Frame 2078247810",
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              },
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "group",
+                  "id": "m3eYA",
+                  "name": "Group",
+                  "children": [
+                    {
+                      "type": "group",
+                      "id": "c3lBk",
+                      "x": 0,
+                      "y": 0,
+                      "name": "Group",
+                      "children": [
+                        {
+                          "type": "path",
+                          "id": "6GhEG",
+                          "x": 4.685791015624545,
+                          "y": 3.1140518188476562,
+                          "name": "Vector",
+                          "geometry": "M18.85 30.36l0 5.21c9.34-0.54 16.75-8.29 16.75-17.77 0-9.48-7.97-17.8-17.8-17.8-9.83 0-17.8 7.97-17.8 17.8 0 9.83 7.29 17.09 16.52 17.75l0-5.19 2.33 0z",
+                          "width": 15.474296569824219,
+                          "height": 15.194360733032227,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "a8xKn",
+                          "x": 3.0166015624995453,
+                          "y": 1.5719858407974243,
+                          "name": "Vector",
+                          "geometry": "M43.16 21.58c0-11.92-9.66-21.58-21.58-21.58-11.92 0-21.58 9.66-21.58 21.58 0 11.92 9.01 20.91 20.36 21.55l0-3.97c-9.23-0.66-16.52-8.35-16.52-17.75 0-9.4 7.97-17.8 17.8-17.8 9.83 0 17.8 7.97 17.8 17.8 0 9.83-7.41 17.23-16.75 17.77l0 3.96c11.41-0.57 20.48-10.01 20.48-21.56l-0.01 0z",
+                          "fill": "#f5db33ff",
+                          "width": 18.764755249023438,
+                          "height": 18.428022384643555,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "XvXa3",
+                          "x": 10.301757812499545,
+                          "y": 0.0042597451247274876,
+                          "name": "Vector",
+                          "geometry": "M0.00031 13.57c0 8.12 4.93 11.98 4.93 11.98l0-25.55c-5.06 7.07-4.93 13.57-4.93 13.57z",
+                          "fill": "#f5db33ff",
+                          "width": 2.1430630683898926,
+                          "height": 10.914139747619629,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Dq0sI",
+                          "x": 12.444738388061069,
+                          "y": 0,
+                          "name": "Vector",
+                          "geometry": "M0 0l0 25.55c0 0 4.93-3.87 4.93-11.98 0 0 0.13-6.5-4.93-13.57z",
+                          "fill": "#f5db33ff",
+                          "width": 2.1430649757385254,
+                          "height": 10.914139747619629,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Hnepc",
+                          "x": 0,
+                          "y": 9.038887023925781,
+                          "name": "Vector",
+                          "geometry": "M27.3 25.59l0-16.23c0 0-0.13-8.3-9.03-9.36l-18.27 0 4.65 4.42 12.35 0c0 0 5.45 1.11 5.45 6.91l0 13.52 4.85 0.74z",
+                          "fill": "#f5db33ff",
+                          "width": 11.866523742675781,
+                          "height": 10.931225776672363,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "hGEOv",
+                          "x": 12.879394531249545,
+                          "y": 9.038887023925781,
+                          "name": "Vector",
+                          "geometry": "M0 25.6l0-16.23c0 0 0.13-8.3 9.03-9.37l18.27 0-4.65 4.42-12.35 0c0 0-5.45 1.11-5.45 6.91l0 13.52-4.85 0.74 0 0.01z",
+                          "fill": "#f5db33ff",
+                          "width": 11.866524696350098,
+                          "height": 10.93549633026123,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "id": "SncUG",
+                      "x": 28.949218749999545,
+                      "y": 4.352836608886719,
+                      "name": "Group",
+                      "children": [
+                        {
+                          "type": "path",
+                          "id": "F13dr",
+                          "x": 0,
+                          "y": 0.19222767651081085,
+                          "name": "Vector",
+                          "geometry": "M7.64 16.17l-7.64-16.17 5.4 0 2.55 6.23c0.72 1.89 1.41 3.68 2.2 5.64l0.14 0c0.79-1.96 1.55-3.75 2.27-5.64l2.55-6.23 5.3 0-7.67 16.17 0 9.33-5.09 0 0-9.33-0.01 0z",
+                          "fill": "#111111ff",
+                          "width": 8.871641159057617,
+                          "height": 10.892780303955078,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Iurb1",
+                          "x": 9.302026748656772,
+                          "y": 0,
+                          "name": "Vector",
+                          "geometry": "M0 13.11c0-8.29 4.65-13.11 11.39-13.11 6.74 0 11.39 4.85 11.39 13.11 0 8.26-4.65 13.32-11.39 13.32-6.74 0-11.39-5.06-11.39-13.32z m17.59 0c0-5.47-2.40999-8.74-6.19-8.74-3.78 0-6.19 3.27-6.19 8.74 0 5.47 2.41 8.91 6.19 8.91 3.78 0 6.18999-3.48 6.19-8.91z",
+                          "fill": "#111111ff",
+                          "width": 9.901808738708496,
+                          "height": 11.290046691894531,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "YxY9V",
+                          "x": 21.311767578124545,
+                          "y": 0.19222767651081085,
+                          "name": "Vector",
+                          "geometry": "M0 14.04l0-14.04 5.09 0 0 14.49c0 5.3 1.86 7.09 4.82 7.09 2.96 0 4.95-1.79 4.95001-7.09l0-14.49 4.89 0 0 14.04c0 8.46-3.61001 11.94-9.84001 11.94-6.23 0-9.91-3.48-9.91-11.94z",
+                          "fill": "#111111ff",
+                          "width": 8.584758758544922,
+                          "height": 11.097821235656738,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "pPALT",
+                          "x": 32.561035156249545,
+                          "y": 0.19222767651081085,
+                          "name": "Vector",
+                          "geometry": "M0 0l5.20001 0 7.4 13.59 2.55 5.51 0.17 0c-0.24-2.65-0.65001-6.02-0.65001-8.91l0-10.19 4.82001 0 0 25.5-5.16001 0-7.36-13.63-2.58-5.47-0.17 0c0.24 2.75 0.62001 5.95 0.62001 8.88l0 10.22-4.82001 0 0-25.5-0.02 0z",
+                          "fill": "#111111ff",
+                          "width": 8.471744537353516,
+                          "height": 10.892780303955078,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "JVFEd",
+                          "x": 43.210510253905795,
+                          "y": 0,
+                          "name": "Vector",
+                          "geometry": "M0 13.32c0-8.4 5.44-13.32 12.22-13.32 3.68 0 6.23 1.58 7.88001 3.27l-2.68001 3.23c-1.27-1.2-2.71999-2.13-5.01999-2.13-4.23 0-7.19 3.3-7.19 8.77 0 5.47 2.54999 8.88 7.56999 8.88 1.2 0 2.44001-0.34 3.17001-0.96l0-5.02-4.51001 0 0-4.16 9.05 0 0 11.49c-1.72 1.69-4.70999 3.06-8.25999 3.06-6.92 0-12.22-4.61-12.22-13.11l-0.01001 0z",
+                          "fill": "#111111ff",
+                          "width": 8.906414985656738,
+                          "height": 11.290046691894531,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "zxeyO",
+                          "x": 54.486083984374545,
+                          "y": 0.19222767651081085,
+                          "name": "Vector",
+                          "geometry": "M0 0l8.36 0c5.64 0 9.98 2 9.98 8.02 0 6.02-4.37 8.43-9.84 8.43l-3.41 0 0 9.05-5.09 0 0-25.5z m8.16 12.42c3.51 0 5.2-1.48 5.2-4.4 0-2.92-1.85999-3.96-5.36999-3.96l-2.89 0 0 8.36 3.05999 0z",
+                          "fill": "#111111ff",
+                          "width": 7.971868515014648,
+                          "height": 10.892780303955078,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "rB5ok",
+                          "x": 63.90975189208939,
+                          "y": 0,
+                          "name": "Vector",
+                          "geometry": "M0 13.11c0-8.29 4.65-13.11 11.39-13.11 6.74 0 11.39 4.85 11.39 13.11 0 8.26-4.65 13.32-11.39 13.32-6.74 0-11.39-5.06-11.39-13.32z m17.58 0c0-5.47-2.41-8.74-6.19-8.74-3.78 0-6.19 3.27-6.19 8.74 0 5.47 2.41 8.91 6.19 8.91 3.78 0 6.19-3.48 6.19-8.91z",
+                          "fill": "#111111ff",
+                          "width": 9.901808738708496,
+                          "height": 11.290046691894531,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "VW0q6",
+                          "x": 75.42397308349564,
+                          "y": 0,
+                          "name": "Vector",
+                          "geometry": "M0 13.11c0-8.29 4.65-13.11 11.39-13.11 6.74 0 11.39 4.85 11.39 13.11 0 8.26-4.65 13.32-11.39 13.32-6.74 0-11.39-5.06-11.39-13.32z m17.58002 0c0-5.47-2.41002-8.74-6.19002-8.74-3.78 0-6.18999 3.27-6.18999 8.74 0 5.47 2.40999 8.91 6.18999 8.91 3.78 0 6.19002-3.48 6.19002-8.91z",
+                          "fill": "#111111ff",
+                          "width": 9.901808738708496,
+                          "height": 11.290046691894531,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "NfPz0",
+                          "x": 87.49487304687455,
+                          "y": 0.19222767651081085,
+                          "name": "Vector",
+                          "geometry": "M0 0l5.19998 0 7.4 13.59 2.55001 5.51 0.16999 0c-0.24-2.65-0.64999-6.02-0.65-8.91l0-10.19 4.82001 0 0 25.5-5.16 0-7.36002-13.63-2.57999-5.47-0.17001 0c0.24 2.75 0.62003 5.95 0.62003 8.88l0 10.22-4.82001 0 0-25.5-0.01999 0z",
+                          "fill": "#111111ff",
+                          "width": 8.4717378616333,
+                          "height": 10.892780303955078,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "jdhoW",
+                          "x": 98.14445495605423,
+                          "y": 0,
+                          "name": "Vector",
+                          "geometry": "M0 13.32c0-8.4 5.43997-13.32 12.21997-13.32 3.68 0 6.23001 1.58 7.88001 3.27l-2.68 3.23c-1.27-1.2-2.71999-2.13-5.01999-2.13-4.23 0-7.19 3.3-7.19 8.77 0 5.47 2.55001 8.88 7.57001 8.88 1.2 0 2.43998-0.34 3.16998-0.96l0-5.02-4.51001 0 0-4.16 9.05002 0 0 11.49c-1.72 1.69-4.71001 3.06-8.26001 3.06-6.92 0-12.22-4.61-12.22-13.11l-0.00998 0z",
+                          "fill": "#111111ff",
+                          "width": 8.90640926361084,
+                          "height": 11.290046691894531,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "fE61t",
+              "name": "Frame 34698",
+              "cornerRadius": 6,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              },
+              "gap": 20,
+              "padding": [
+                0,
+                2
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Yl4x2",
+                  "name": "toggle switch",
+                  "cornerRadius": 1000,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "vertical",
+                  "justifyContent": "center",
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ztxLK",
+                      "name": "Frame 2078247800",
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      },
+                      "gap": 8,
+                      "justifyContent": "end",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "8EKlm",
+                          "name": "Frame 2078247799",
+                          "enabled": false,
+                          "width": 40,
+                          "height": 24,
+                          "fill": "#333333ff",
+                          "cornerRadius": 1000,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": 1
+                          },
+                          "padding": 4,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "9Iwz7",
+                              "name": "check",
+                              "width": 18,
+                              "height": 18,
+                              "fill": "#ffffffff",
+                              "cornerRadius": 999,
+                              "stroke": {
+                                "align": "inside",
+                                "thickness": 1
+                              },
+                              "layout": "none",
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "AiUGE",
+                                  "x": 4.5,
+                                  "y": 6.300000190734863,
+                                  "name": "live area",
+                                  "enabled": false,
+                                  "width": 9,
+                                  "height": 5.400000095367432,
+                                  "stroke": {
+                                    "align": "inside",
+                                    "thickness": 1
+                                  },
+                                  "layout": "none",
+                                  "children": [
+                                    {
+                                      "type": "path",
+                                      "id": "Ppj1z",
+                                      "x": 0,
+                                      "y": 0,
+                                      "name": "Vector 1",
+                                      "geometry": "M0 3.2l3.27245 3.8 6.72755-7",
+                                      "width": 9,
+                                      "height": 6.300000190734863,
+                                      "stroke": {
+                                        "align": "center",
+                                        "thickness": 2,
+                                        "join": "round",
+                                        "cap": "round",
+                                        "fill": "#666666ff"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "6Up91",
+                          "name": "큰글씨",
+                          "fill": "#333333ff",
+                          "content": "큰글씨",
+                          "lineHeight": 1.600000023841858,
+                          "fontFamily": "Pretendard GOV",
+                          "fontSize": 12,
+                          "fontWeight": "500",
+                          "letterSpacing": -0.25
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "rErAw",
+                  "name": "icon20",
+                  "enabled": false,
+                  "width": 20,
+                  "height": 20,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1
+                  },
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "id": "PcDRu",
+                      "x": 2.00390625,
+                      "y": 2,
+                      "name": "Rectangle 98",
+                      "width": 16,
+                      "height": 16,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1
+                      }
+                    },
+                    {
+                      "type": "group",
+                      "id": "uPTdo",
+                      "x": 4,
+                      "y": 2,
+                      "name": "live area",
+                      "children": [
+                        {
+                          "type": "path",
+                          "id": "Oe6YT",
+                          "x": 8,
+                          "y": 16,
+                          "name": "Rectangle 2419",
+                          "rotation": 180,
+                          "geometry": "M0 0l8 0 0 16-8 0",
+                          "width": 8,
+                          "height": 16,
+                          "stroke": {
+                            "align": "inside",
+                            "thickness": {
+                              "top": 1.5,
+                              "right": 1.5,
+                              "bottom": 1.5
+                            },
+                            "join": "round",
+                            "cap": "round",
+                            "fill": "#666666ff"
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "O6p4d",
+                          "x": 5,
+                          "y": 8,
+                          "name": "Vector 4",
+                          "geometry": "M0 0l11.96875 0",
+                          "width": 8,
+                          "height": 0,
+                          "stroke": {
+                            "align": "center",
+                            "thickness": 1.5,
+                            "join": "round",
+                            "cap": "round",
+                            "fill": "#666666ff"
+                          }
+                        },
+                        {
+                          "type": "path",
+                          "id": "Crpkx",
+                          "x": 10.5,
+                          "y": 4.5,
+                          "name": "Vector 3",
+                          "geometry": "M0 0l3.5 3.5-3.5 3.5",
+                          "width": 3.5,
+                          "height": 7,
+                          "stroke": {
+                            "align": "center",
+                            "thickness": 1.5,
+                            "join": "round",
+                            "cap": "round",
+                            "fill": "#666666ff"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "okv6k",
+                  "name": "로그아웃",
+                  "fill": "#333333ff",
+                  "content": "로그아웃",
+                  "lineHeight": 1.600000023841858,
+                  "fontFamily": "Pretendard GOV",
+                  "fontSize": 14,
+                  "fontWeight": "normal",
+                  "letterSpacing": -0.25
+                }
+              ]
+            }
+          ]
         }
       ]
+    }
+  ],
+  "fonts": [
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-Thin.otf",
+      "weight": 100
+    },
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-Light.otf",
+      "weight": 300
+    },
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-ExtraBold.otf",
+      "weight": 800
+    },
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-Medium.otf",
+      "weight": 500
+    },
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-Bold.otf",
+      "weight": 700
+    },
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-Regular.otf"
+    },
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-SemiBold.otf",
+      "weight": 600
+    },
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-Black.otf",
+      "weight": 900
+    },
+    {
+      "name": "Pretendard GOV",
+      "url": "./PretendardGOV-ExtraLight.otf",
+      "weight": 200
     }
   ]
 }
