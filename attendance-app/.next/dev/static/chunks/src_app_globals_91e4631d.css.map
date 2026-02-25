@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/ijaegwang/wordncode/Pencil/_01/attendance-app/src/app/globals.css"],"sourcesContent":[":root {\n  --font-scale: 1;\n}\n\n* {\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\nhtml,\nbody {\n  max-width: 100vw;\n  overflow-x: hidden;\n  font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;\n}\n\nbody {\n  font-size: calc(16px * var(--font-scale));\n}\n"],"names":[],"mappings":"AAAA;;;;AAIA;;;;;;AAMA;;;;;;AAOA"}}]
+}

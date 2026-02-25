@@ -1,0 +1,451 @@
+/* [project]/src/scss/login.scss.css [app-client] (css) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --font-scale: 1;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Pretendard, sans-serif;
+  display: flex;
+}
+
+#root {
+  width: 100%;
+}
+
+.login-screen {
+  background-color: #f5f4f1;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-screen .top-bar {
+  justify-content: flex-end;
+  width: 100%;
+  padding: 20px 16px;
+  display: flex;
+}
+
+.login-screen .top-bar .font-toggle {
+  background-color: #edecea;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  height: 36px;
+  padding: 3px;
+  display: flex;
+}
+
+.login-screen .top-bar .font-toggle .font-btn {
+  cursor: pointer;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 30px;
+  display: flex;
+}
+
+.login-screen .top-bar .font-toggle .font-btn.active {
+  background-color: #fff;
+}
+
+.login-screen .top-bar .font-toggle .font-btn.active .text {
+  color: #1a1918;
+}
+
+.login-screen .top-bar .font-toggle .font-btn .text {
+  color: #9c9b99;
+  font-weight: 600;
+}
+
+.login-screen .top-bar .font-toggle .font-btn.small .text {
+  font-size: calc(13px * var(--font-scale));
+}
+
+.login-screen .top-bar .font-toggle .font-btn.big .text {
+  font-size: calc(18px * var(--font-scale));
+}
+
+.login-screen .content-area {
+  flex-direction: column;
+  flex: 1;
+  padding: 0 24px;
+  display: flex;
+  overflow-y: auto;
+}
+
+.login-screen .logo-section {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 0 24px;
+  display: flex;
+}
+
+.login-screen .logo-section .logo-wrap {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.login-screen .logo-section .logo-circle {
+  background-color: #f5db33;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  display: flex;
+}
+
+.login-screen .logo-section .app-name {
+  font-size: calc(32px * var(--font-scale));
+  color: #1a1918;
+  letter-spacing: -1px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.login-screen .logo-section .app-desc {
+  font-size: calc(15px * var(--font-scale));
+  color: #6d6c6a;
+  text-align: center;
+  font-weight: 400;
+}
+
+.login-screen .otp-section {
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 0 24px 24px;
+  display: flex;
+}
+
+.login-screen .otp-section .otp-title {
+  font-size: calc(16px * var(--font-scale));
+  color: #6d6c6a;
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.login-screen .otp-section .otp-inputs {
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  display: flex;
+}
+
+.login-screen .otp-section .otp-inputs .otp-input {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: calc(24px * var(--font-scale));
+  color: #1a1918;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  outline: none;
+  font-weight: bold;
+  transition: border-color .2s;
+}
+
+.login-screen .otp-section .otp-inputs .otp-input:focus {
+  border-width: 1px;
+  border-color: #3d8a5a;
+}
+
+.login-screen .otp-section .otp-inputs .otp-input.filled {
+  border-color: #1a1918;
+}
+
+.login-screen .otp-section .otp-timer {
+  font-size: calc(20px * var(--font-scale));
+  color: #6d6c6a;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.login-screen .otp-section .otp-error {
+  font-size: calc(13px * var(--font-scale));
+  color: #ef4444;
+  margin-top: 4px;
+}
+
+.login-screen .login-form-container {
+  flex-direction: column;
+  gap: 0;
+  display: flex;
+}
+
+.login-screen .form-section {
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 0 8px;
+  display: flex;
+}
+
+.login-screen .form-section .input-group {
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  display: flex;
+}
+
+.login-screen .form-section .input-group .input-label {
+  font-size: calc(13px * var(--font-scale));
+  color: #1a1918;
+  font-weight: 600;
+}
+
+.login-screen .form-section .input-group .input-field {
+  background-color: #fff;
+  border-radius: 6px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  height: 52px;
+  padding: 0 16px;
+  display: flex;
+}
+
+.login-screen .form-section .input-group .input-field .icon {
+  color: #9c9b99;
+  width: 20px;
+  height: 20px;
+}
+
+.login-screen .form-section .input-group .input-field input {
+  font-size: calc(15px * var(--font-scale));
+  color: #1a1918;
+  background: none;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-family: Pretendard, sans-serif;
+}
+
+.login-screen .form-section .input-group .input-field input::placeholder {
+  color: #9c9b99;
+}
+
+.login-screen .form-section .input-group .input-field .clear-btn {
+  cursor: pointer;
+  background-color: #1a1918;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+  display: flex;
+}
+
+.login-screen .form-section .input-group .input-field .clear-btn:hover {
+  background-color: #333;
+}
+
+.login-screen .form-section .forgot-pw {
+  text-align: right;
+  font-size: calc(13px * var(--font-scale));
+  color: #3d8a5a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-screen .button-section {
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  display: flex;
+}
+
+.login-screen .button-section button {
+  cursor: pointer;
+  width: 100%;
+  height: 52px;
+  font-family: Pretendard, sans-serif;
+  font-size: calc(15px * var(--font-scale));
+  border: none;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  display: flex;
+}
+
+.login-screen .button-section .login-btn {
+  color: #000;
+  height: 56px;
+  font-size: calc(18px * var(--font-scale));
+  background-color: #f5db33;
+  font-weight: 600;
+}
+
+.login-screen .button-section .divider-row {
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  display: flex;
+}
+
+.login-screen .button-section .divider-row .line {
+  background-color: #e5e4e1;
+  flex: 1;
+  height: 1px;
+}
+
+.login-screen .button-section .divider-row .div-text {
+  font-size: calc(13px * var(--font-scale));
+  color: #9c9b99;
+}
+
+.login-screen .button-section .social-btn {
+  color: #fff;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.login-screen .button-section .social-btn.facebook {
+  background-color: #1877f2;
+}
+
+.login-screen .button-section .social-btn.google {
+  color: #1a1918;
+  background-color: #fff;
+  border: 1px solid #e5e4e1;
+}
+
+.login-screen .button-section .social-btn.apple {
+  background-color: #000;
+}
+
+.login-screen .button-section .social-btn .logo-circle {
+  color: #000;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  font-size: calc(14px * var(--font-scale));
+  background-color: #fff;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.login-screen .button-section .social-btn .logo-circle.fb-logo {
+  color: #1877f2;
+  font-size: calc(16px * var(--font-scale));
+}
+
+.login-screen .button-section .social-btn .logo-circle.apple-logo {
+  color: #000;
+}
+
+.login-screen .button-section .social-btn.google .logo-circle {
+  color: #4285f4;
+  border: 1px solid #eee;
+}
+
+.login-screen .signup-row {
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 0;
+  display: flex;
+}
+
+.login-screen .signup-row .signup-text {
+  font-size: calc(14px * var(--font-scale));
+  color: #6d6c6a;
+}
+
+.login-screen .signup-row .signup-link {
+  font-size: calc(14px * var(--font-scale));
+  color: #3d8a5a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-screen .tab-bar {
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.login-screen .tab-bar .tab-bar-inner {
+  background-color: #fff;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  padding: 16px;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+}
+
+.login-screen .tab-bar .tab-item {
+  cursor: pointer;
+  color: #6b7280;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 56px;
+  display: flex;
+}
+
+.login-screen .tab-bar .tab-item .icon-wrap {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  display: flex;
+}
+
+.login-screen .tab-bar .tab-item .tab-label {
+  font-size: calc(11px * var(--font-scale));
+  font-weight: normal;
+}
+
+.login-screen .tab-bar .tab-item.active {
+  color: #4f46e5;
+}
+
+.login-screen .tab-bar .tab-item.active .icon-bg {
+  background-color: #eef2ff;
+  border-radius: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  display: flex;
+}
+
+.login-screen .tab-bar .tab-item.active .tab-label {
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=src_scss_login_scss_a43dfc86.css.map*/
