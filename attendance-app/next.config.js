@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  basePath: '/attendance', // Replace with your repository name if different
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

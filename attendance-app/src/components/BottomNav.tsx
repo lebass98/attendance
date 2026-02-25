@@ -1,5 +1,6 @@
 import React from 'react';
 import { House, Search, Heart, Bell, CircleUserRound } from 'lucide-react';
+import Link from 'next/link';
 
 interface BottomNavProps {
   activeTab?: string;
@@ -9,7 +10,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ activeTab = 'home' }) => {
   return (
     <div className="tab-bar">
       <div className="tab-bar-inner">
-        <div className={`tab-item ${activeTab === 'home' ? 'active' : ''}`}>
+        <Link href="/main" className={`tab-item ${activeTab === 'home' ? 'active' : ''}`}>
           {activeTab === 'home' ? (
             <div className="icon-bg">
               <House size={20} />
@@ -20,7 +21,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ activeTab = 'home' }) => {
             </div>
           )}
           <span className="tab-label">Home</span>
-        </div>
+        </Link>
         
         <div className={`tab-item ${activeTab === 'search' ? 'active' : ''}`}>
            {activeTab === 'search' ? (
@@ -61,7 +62,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ activeTab = 'home' }) => {
           <span className="tab-label">Notifications</span>
         </div>
 
-        <div className={`tab-item ${activeTab === 'profile' ? 'active' : ''}`}>
+        <Link href="/" className={`tab-item ${activeTab === 'profile' ? 'active' : ''}`}>
            {activeTab === 'profile' ? (
             <div className="icon-bg">
                <CircleUserRound size={20} />
@@ -72,7 +73,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ activeTab = 'home' }) => {
             </div>
           )}
           <span className="tab-label">Profile</span>
-        </div>
+        </Link>
       </div>
     </div>
   );
